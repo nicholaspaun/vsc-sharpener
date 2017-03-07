@@ -55,7 +55,7 @@ function sendCd() {
     })(1)(patternInput[0]);
 
     _fableCore.Seq.iterate(function (n) {
-        n.sendText("fsi " + editor.document.fileName + " # https://github.com/nicholaspaun/vsc-sharpener")
+        n.sendText("fsiw " + editor.document.fileName + " vsc # https://github.com/nicholaspaun/vsc-sharpener")
 	n.sendText(";;") 
         //n.sendText(msg1, false);
         //n.sendText(msg2, false);
