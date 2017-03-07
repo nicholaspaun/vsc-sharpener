@@ -1,0 +1,47 @@
+#!/bin/bash
+# fsiw: A wrapper for F# interactive
+# <http://github.com/nicholaspaun/fsharpener>
+
+
+######## Configuration #########
+# Should we restart FSI automatically when you press Ctrl + D (or ask you first instead)?
+AUTO_RESTART="yes" 
+
+# Should we open every module opened by the file you're working on?
+OPEN_OPEN="yes"
+########		########
+
+
+file="$1"
+auto="$2"
+mods="`grep -E '^\w*module' $file`"
+
+if [ $? -eq 0 ]; then # Grep found something worth opening
+	modcode=`echo "$mods" |  head -n 1 | sed s/'module '//g`
+	echo "open $modcode;;" > ~/.fsinit
+else
+	echo "" > ~/.fsinit
+fi
+
+if [ "$OPEN_OPEN" = "yes" ]; then
+	open="`grep -E '^\w*open' $file`"
+	echo "$open;;" >> ~/.fsinit
+fi
+
+cd `dirname $file`
+
+while true; do
+	fsharpi --load:$file --use:$HOME/.fsinit
+
+	if [ "$AUTO_RESTART$auto" = "yesvsc" ]; then
+		echo -e "\n\033[0;35mRestarting FSI...\033[0m"
+	else
+		echo -en "\n\033[0;35mRestart FSI?\033[0m (\033[1my\033[0m/n) "
+		read FSI
+
+		case $FSI in
+			n*) exit ;;
+			*)  ;;
+		esac
+	fi
+done
