@@ -17,6 +17,14 @@ You can also use `fsiw` separately from the command-line, like this `fsiw your-c
 
 **NOTE:** The installation process replaces the existing Ionide extension, installs the wrapper script and updates your path to allow it to run if necessary. If that sounds really hacky, that's because it is.
 
+## Notes
+
+* `vsc-sharpener` tries to identify itself so if something breaks later, you won't be entirely lost as to where to look.
+* To quit FSI, click on the trash can icon.
+* You can start a FSI terminal by typing `CTRL+P` then `> fsi start` then `ENTER`. 
+* To save time, you can bind `fsi.Start` to a useful shortcut.
+* Some weird stuff will get typed when you change tabs. Just ignore it. You can type at the prompt without issue.
+
 ## Stuff it doesn't do
 
 1. **Work on Windows** --> Consider installing Visual Studio Community Edition.

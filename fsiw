@@ -11,6 +11,7 @@ AUTO_RESTART="yes"
 OPEN_OPEN="yes"
 ########		########
 
+echo -e "\033[35mFSIw Loader\033[0m # http://github.com/nicholaspaun/vsc-sharpener"
 
 file="$1"
 auto="$2"
