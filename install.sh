@@ -11,8 +11,9 @@ else
 	echo "Congrats. Your PATH will work for the installation"
 fi
 
-echo "Your original extension was backed up to $HOME/.Ionide-BKUP"
-mv ~/.vscode/extensions/Ionide.Ionide-fsharp*/ ~/.Ionide-BKUP
+echo "Your original extension will be backed up to $HOME/.Ionide-BKUP"
+cp -a ~/.vscode/extensions/Ionide.Ionide-fsharp*/ ~/.Ionide-BKUP
+rm -r ~/.vscode/extensions/Ionide.Ionide-fsharp*
 
 echo "Extracting extension..."
 tar -xzf ionide-source.tar.gz -C ~/.vscode/extensions/
