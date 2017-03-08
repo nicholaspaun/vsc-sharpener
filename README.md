@@ -2,11 +2,12 @@
 
 ## Instructions
 
-1. Download the code: [vsc-shaperner-master.zip](Test).
+1. Download the code: [vsc-sharpener-master.zip](https://github.com/nicholaspaun/vsc-sharpener/archive/master.zip).
 2. Unzip it.
 3. **Disable Auto Updates or it'll break again!**
 4. **Close VS Code**.
 5. Run `./install.sh`.
+  * (In the `vsc-sharpener-master/` directory.)
 6. Open VS Code.
 
 ## How it works
