@@ -2,11 +2,12 @@
 
 ## Instructions
 
-1. Download the code: [vsc-shaperner-master.zip](Test).
+1. Download the code: [vsc-sharpener-master.zip](https://github.com/nicholaspaun/vsc-sharpener/archive/master.zip).
 2. Unzip it.
 3. **Disable Auto Updates or it'll break again!**
 4. **Close VS Code**.
 5. Run `./install.sh`.
+  * (Make sure you are in the `vsc-sharpener-master/` directory.)
 6. Open VS Code.
 
 ## How it works
@@ -24,7 +25,7 @@ You can also use `fsiw` separately from the command-line, like this `fsiw your-c
 * You can start a FSI terminal by typing `CTRL+P` then `> fsi start` then `ENTER`. 
 * To save time, you can bind `fsi.Start` to a useful shortcut.
 * Some weird stuff will get typed when you change tabs. Just ignore it. You can type at the prompt without issue.
-* If you open a different file, you need to restart FSI to avoid issues. (i.e. '> fsi start`)
+* If you open a different file, you need to restart FSI to avoid issues. (i.e. `> fsi start`)
 
 ## Stuff it doesn't do
 
