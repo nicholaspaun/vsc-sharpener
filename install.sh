@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir ~/bin
 cp -a fsiw ~/bin/fsiw
 
 which fsiw > /dev/null
